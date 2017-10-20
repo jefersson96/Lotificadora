@@ -11,12 +11,16 @@ package lotificadora;
  */
 public class Terreno {
     private double largo, ancho, precio;
-
+ProyectoNotificacion h=new ProyectoNotificacion();
     public Terreno(double largo, double ancho, double precio) {
         this.largo = largo;
         this.ancho = ancho;
         this.precio = precio;
     }
+
+
+
+   
 
     public void setLargo(double largo) {
         this.largo = largo;
@@ -51,6 +55,24 @@ public class Terreno {
     {
         return precio + (precio * 0.15);
     }
+    
+    public boolean Ocupado(int x, int y){
+       if(h.terrenos[x][y]==null){
+
+    
+     return true;
+       }else{
+      return false;
+       
+       }
+        
+       
+    
+    
+    
+    }
+    
+    
     
     public void printTerreno()
     {
